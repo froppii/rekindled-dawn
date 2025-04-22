@@ -54,6 +54,7 @@ func _process(delta):
 		if type == 2:
 			otherpos.get_distance()
 	if HP <= 0:
+		UltraHDGraphicsManager.simulate_explosion(self)
 		queue_free()
 	#
 func attack(collidee,collision):
