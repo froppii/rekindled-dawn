@@ -120,6 +120,7 @@ func _physics_process(delta: float) -> void:
 	animate()
 	if HP <= 0:
 		position = Vector2(0,0)
+		UltraHDGraphicsManager.simulate_explosion(self, Vector2(1,1), 40)
 		HP = 10
 	#checks if there is an object adjacent in the direction the character is pointing towards
 	col = move_and_collide(translate_dir(dir)*16*5,true)
